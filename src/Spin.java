@@ -1,7 +1,7 @@
 
 public class Spin extends Attractie {
 	Spin() {
-		super("Spin", 2.25);
+		super("Spin", 2.25, 6);
 	}
 
 }
