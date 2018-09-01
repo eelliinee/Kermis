@@ -22,6 +22,10 @@ abstract public class Attractie {
 			System.out.println("Er zit nu " + bezetting + " perso(o)n(en) te wachten.");
 			System.out.println("Er moeten nog minimaal " + (capaciteit - bezetting) + " perso(o)n(en) bij voordat we gaan draaien.");
 		}
+		Kassa.kermisOmzet += prijs;
+	//	System.out.println(Kassa.kermisOmzet);
+		attractieOmzet += prijs;
+	//	System.out.println(naam + attractieOmzet);
 	}
 	
 	void draaien() {
@@ -29,5 +33,6 @@ abstract public class Attractie {
 		bezetting = 0;
 		
 	}
+	
 
 }

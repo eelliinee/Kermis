@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Kassa {
 	Boolean open = true;
-	double kermisOmzet;
+	static double kermisOmzet;
 	Attractie botsautos = new Botsautos();
 	Attractie spin = new Spin();
 	Attractie spiegelpaleis = new Spiegelpaleis();
@@ -45,6 +45,16 @@ public class Kassa {
 			case "q":
 				System.out.println("De kermis is nu gesloten");
 				open = false;
+				break;
+			case "o":
+				System.out.println("Omzet per attractie:");
+				System.out.println(botsautos.naam + ": €" + botsautos.attractieOmzet);
+				System.out.println(spin.naam + ": €" + spin.attractieOmzet);
+				System.out.println(spiegelpaleis.naam + ": €" + spiegelpaleis.attractieOmzet);
+				System.out.println(spookhuis.naam + ": €" + spookhuis.attractieOmzet);
+				System.out.println(hawaii.naam + ": €" + hawaii.attractieOmzet);
+				System.out.println(ladderklimmer.naam + ": €" + ladderklimmer.attractieOmzet);
+				System.out.println("Totale omzet is: €" + kermisOmzet);
 			}
 		}
 		scanner.close();
