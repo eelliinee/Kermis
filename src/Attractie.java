@@ -4,6 +4,7 @@ abstract public class Attractie {
 	protected double prijs;
 	protected int oppervlakte;
 	public double attractieOmzet;
+	public int verkochteKaartjes;
 	public int bezetting;
 	protected int capaciteit;
 	
@@ -26,6 +27,10 @@ abstract public class Attractie {
 	//	System.out.println(Kassa.kermisOmzet);
 		attractieOmzet += prijs;
 	//	System.out.println(naam + attractieOmzet);
+		Kassa.verkochteKaartjesTotaal++;
+	//	System.out.println(Kassa.verkochteKaartjesTotaal);
+		verkochteKaartjes++;
+	//	System.out.println(verkochteKaartjes);
 	}
 	
 	void draaien() {

@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Kassa {
 	Boolean open = true;
 	static double kermisOmzet;
+	static int verkochteKaartjesTotaal;
 	Attractie botsautos = new Botsautos();
 	Attractie spin = new Spin();
 	Attractie spiegelpaleis = new Spiegelpaleis();
@@ -55,6 +56,16 @@ public class Kassa {
 				System.out.println(hawaii.naam + ": €" + hawaii.attractieOmzet);
 				System.out.println(ladderklimmer.naam + ": €" + ladderklimmer.attractieOmzet);
 				System.out.println("Totale omzet is: €" + kermisOmzet);
+				break;
+			case "k":
+				System.out.println("Aantal verkochte kaartjes per attractie:");
+				System.out.println(botsautos.naam + ": " + botsautos.verkochteKaartjes);
+				System.out.println(spin.naam + ": " + spin.verkochteKaartjes);
+				System.out.println(spiegelpaleis.naam + ": " + spiegelpaleis.verkochteKaartjes);
+				System.out.println(spookhuis.naam + ": " + spookhuis.verkochteKaartjes);
+				System.out.println(hawaii.naam + ": " + hawaii.verkochteKaartjes);
+				System.out.println(ladderklimmer.naam + ": " + ladderklimmer.verkochteKaartjes);
+				System.out.println("Totaal aantal verkochte kaartjes: " + verkochteKaartjesTotaal);
 			}
 		}
 		scanner.close();
