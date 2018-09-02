@@ -24,6 +24,8 @@ public class Kassa {
 			
 			String input = scanner.next();
 			
+			// switch voor controle paneel
+			// refactor later
 			switch(input) {
 			case "1":
 				botsautos.kaartjeVerkopen();
