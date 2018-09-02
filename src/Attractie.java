@@ -7,6 +7,7 @@ abstract public class Attractie {
 	public int verkochteKaartjes;
 	public int bezetting;
 	protected int capaciteit;
+	public boolean goedgekeurd;
 	
 	Attractie(String naam, double prijs, int capaciteit) {
 		this.naam = naam;
@@ -18,7 +19,11 @@ abstract public class Attractie {
 		System.out.println("Ga maar naar binnen.");
 		bezetting++;
 		if (bezetting == capaciteit) {
-			draaien();
+			try {
+				draaien();
+			} catch (Exception e) {
+				System.out.println(naam + " kan nu niet draaien, roep de monteur.");
+			}
 		} else {
 			System.out.println("Er zit nu " + bezetting + " perso(o)n(en) te wachten.");
 			System.out.println("Er moeten nog minimaal " + (capaciteit - bezetting) + " perso(o)n(en) bij voordat we gaan draaien.");
@@ -33,11 +38,12 @@ abstract public class Attractie {
 	//	System.out.println(verkochteKaartjes);
 	}
 	
-	void draaien() {
+	void draaien() throws Exception {
 		System.out.println("De attractie " + naam + " draait.");
 		bezetting = 0;
 		
 	}
+
 	
 
 }

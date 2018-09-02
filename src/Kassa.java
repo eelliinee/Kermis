@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Kassa {
-	Boolean open = true;
+	Boolean open = false;
 	static double kermisOmzet;
 	static int verkochteKaartjesTotaal;
 	Attractie botsautos = new Botsautos();
@@ -17,6 +17,21 @@ public class Kassa {
 		
 	}
 	
+	void kermisOpenen() {
+		System.out.println("Wilt u de kermis openen? Voer dan eerst de opstellingskeuringen (o) uit.");
+		String input = scanner.next();
+		if (input.equals("o")) {
+			spin.goedgekeurd = ((RisicoRijkeAttractie) spin).opstellingsKeuring();
+			hawaii.goedgekeurd = ((RisicoRijkeAttractie) hawaii).opstellingsKeuring();
+			System.out.println("U kunt nu de kermis openen (o).");
+			String input2 = scanner.next();
+			if (input2.equals("o")) {
+				open = true;
+				controlPanel();
+			}
+		}
+		
+	}
 	
 	void controlPanel() {
 		while (open == true) {
