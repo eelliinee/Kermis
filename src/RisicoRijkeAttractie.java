@@ -2,8 +2,8 @@
 public abstract class RisicoRijkeAttractie extends Attractie {
 
 	private int draaiLimiet;
-	public boolean goedgekeurd;
-	private int gedraaidSindsKeuring;
+	boolean goedgekeurd;
+	int gedraaidSindsKeuring;
 
 	RisicoRijkeAttractie(String naam, double prijs, int capaciteit, int draaiLimiet) {
 		super(naam, prijs, capaciteit);

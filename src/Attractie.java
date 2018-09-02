@@ -16,13 +16,13 @@ abstract public class Attractie {
 	}
 	
 	void kaartjeVerkopen() {
-		System.out.println("Ga maar naar binnen.");
+		System.out.println("Alstublieft, uw kaartje voor " + naam);
 		bezetting++;
-		if (bezetting == capaciteit) {
+		if (bezetting >= capaciteit) {
 			try {
 				draaien();
 			} catch (Exception e) {
-				System.out.println(naam + " kan nu niet draaien, roep de monteur.");
+				System.out.println(naam + " kan nu niet draaien, roep de monteur (m).");
 			}
 		} else {
 			System.out.println("Er zit nu " + bezetting + " perso(o)n(en) te wachten.");

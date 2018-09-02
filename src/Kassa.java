@@ -5,11 +5,12 @@ public class Kassa {
 	static double kermisOmzet;
 	static int verkochteKaartjesTotaal;
 	Attractie botsautos = new Botsautos();
-	Attractie spin = new Spin();
+	RisicoRijkeAttractie spin = new Spin();
 	Attractie spiegelpaleis = new Spiegelpaleis();
 	Attractie spookhuis = new Spookhuis();
-	Attractie hawaii = new Hawaii();
+	RisicoRijkeAttractie hawaii = new Hawaii();
 	Attractie ladderklimmer = new Ladderklimmer();
+	Monteur henk = new Monteur();
 	
 	Scanner scanner = new Scanner(System.in);
 	
@@ -21,8 +22,8 @@ public class Kassa {
 		System.out.println("Wilt u de kermis openen? Voer dan eerst de opstellingskeuringen (o) uit.");
 		String input = scanner.next();
 		if (input.equals("o")) {
-			spin.goedgekeurd = ((RisicoRijkeAttractie) spin).opstellingsKeuring();
-			hawaii.goedgekeurd = ((RisicoRijkeAttractie) hawaii).opstellingsKeuring();
+			spin.goedgekeurd = spin.opstellingsKeuring();
+			hawaii.goedgekeurd = hawaii.opstellingsKeuring();
 			System.out.println("U kunt nu de kermis openen (o).");
 			String input2 = scanner.next();
 			if (input2.equals("o")) {
@@ -83,6 +84,19 @@ public class Kassa {
 				System.out.println(hawaii.naam + ": " + hawaii.verkochteKaartjes);
 				System.out.println(ladderklimmer.naam + ": " + ladderklimmer.verkochteKaartjes);
 				System.out.println("Totaal aantal verkochte kaartjes: " + verkochteKaartjesTotaal);
+				break;
+			case "m":
+				System.out.println("Welke attractie moet gekeurd worden? Hawaii(h) of Spin(s)");
+				String input2 = scanner.next();
+				switch (input2) {
+				case "h":
+					henk.tussentijdseKeuring(hawaii);
+					break;
+				case "s":
+					henk.tussentijdseKeuring(spin);
+					break;
+				}
+				
 			}
 		}
 		scanner.close();
