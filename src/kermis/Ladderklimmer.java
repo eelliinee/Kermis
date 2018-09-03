@@ -1,3 +1,4 @@
+package kermis;
 
 public class Ladderklimmer extends Attractie implements GokAttractie {
 	Ladderklimmer() {

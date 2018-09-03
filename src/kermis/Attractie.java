@@ -1,3 +1,4 @@
+package kermis;
 
 abstract public class Attractie {
 	protected String naam;

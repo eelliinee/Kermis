@@ -1,3 +1,4 @@
+package kermis;
 
 public class Monteur {
 	void tussentijdseKeuring(RisicoRijkeAttractie attractie) {

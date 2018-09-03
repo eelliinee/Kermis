@@ -1,3 +1,4 @@
+package kermis;
 
 public class Hawaii extends RisicoRijkeAttractie {
 	Hawaii() {

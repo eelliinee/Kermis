@@ -1,3 +1,4 @@
+package kermis;
 
 public class Spin extends RisicoRijkeAttractie {
 	Spin() {

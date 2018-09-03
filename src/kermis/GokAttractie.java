@@ -1,3 +1,4 @@
+package kermis;
 
 public interface GokAttractie {
 

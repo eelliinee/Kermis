@@ -1,3 +1,4 @@
+package kermis;
 import java.util.Scanner;
 
 public class Kassa {
